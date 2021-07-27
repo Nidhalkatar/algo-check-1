@@ -1,0 +1,26 @@
+ALGORITHM
+VAR
+    c : CHAR 
+    s : STRING :='';
+    carac : INTEGER := 0;
+    mot : INTEGER := 0;
+    voy : INTEGER := 0;
+BEGIN
+    WHILE (c <> '.') DO
+        Read(c);
+        s:=s+c
+        carac := carac +1;
+        IF (c = 'a' OR c='e' OR c='i' OR c='o' OR c='u' OR c='y') THEN
+            voy := voy +1;
+        END_IF
+
+        IF (c=' ') THEN
+            mot := mot +1;
+        END_IF
+
+    END_WHILE
+
+    Write("The length of the sentence is ",carac);
+    Write("The number of words in the sentence is ",mot);
+    Write("he number of vowels in the sentence. is ",voy);
+END
